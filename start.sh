@@ -10,4 +10,5 @@ umount /dev/shm && mount -t tmpfs shm /dev/shm
 # it saves you a LOT of resources avoiding full-desktops envs
 
 rm /tmp/.X0-lock &>/dev/null || true
+sudo apt-get install florence
 startx /usr/src/app/connectedframe.py
