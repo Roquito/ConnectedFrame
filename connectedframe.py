@@ -82,6 +82,7 @@ def play_pause():
 	play_button.image = img
 
 def carrousel():
+	print("Inside Carrousel")
 	if(carrousel_status):
 		next_image()
 
@@ -161,6 +162,8 @@ next_button.pack(fill=BOTH, expand=1)
 center_label.pack(side="bottom", fill=BOTH, expand=1)
 play_button.pack(fill=BOTH, expand=1)
 like_button.pack(fill=BOTH, expand=1)
+
+print("before going into Carrousel")
 
 carrousel()
 
