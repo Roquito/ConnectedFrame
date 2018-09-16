@@ -124,7 +124,7 @@ def send_event():
 
 root = Tk()
 root.title('Connected Frame')
-root.geometry('{}x{}'.format(800, 480))
+root.geometry('{}x{}'.format(2560, 1080))
 root.attributes("-fullscreen", True)
 root.config(cursor='none')
 
