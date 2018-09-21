@@ -10,7 +10,6 @@ download_interval = int(getenv("DOWNLOAD_INTERVAL_HOURS")) * 60 * 60 * 1000
 carousel_interval = int(getenv("CAROUSEL_INTERVAL_SECONDS")) * 1000
 frame_owner = getenv("FRAME_OWNER")
 ifttt_key = getenv("IFTTT_KEY")
-resolution = getenv("RESOLUTION")
 
 base_path = "/usr/src/app/images/"
 carrousel_status = True
@@ -103,7 +102,7 @@ def initialize():
 	carrousel_status = False
 
 	download_images(dropbox_link)
-	resize_images()
+	#resize_images()
 	image_list = list_images()
 
 	carrousel_status = current_carrousel_status
