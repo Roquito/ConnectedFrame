@@ -34,7 +34,7 @@ def resize_images():
 	for file in images:
 		img = Image.open(file)
 		#previously 640x480
-		img = img.resize((1920, 1080), Image.ANTIALIAS)
+		img = img.resize((800, 600), Image.ANTIALIAS)
 		img.save(file, "JPEG")
 
 def list_images():
@@ -125,7 +125,7 @@ def send_event():
 
 root = Tk()
 root.title('Connected Frame')
-root.geometry('{}x{}'.format(800, 600))
+root.geometry('{}x{}'.format(640, 480))
 root.attributes("-fullscreen", True)
 root.config(cursor='none')
 
