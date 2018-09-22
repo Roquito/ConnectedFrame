@@ -34,7 +34,7 @@ def resize_images():
 	for file in images:
 		img = Image.open(file)
 		#previously 640x480
-		img = img.resize((1920x1080), Image.ANTIALIAS)
+		img = img.resize((1920, 1080), Image.ANTIALIAS)
 		img.save(file, "JPEG")
 
 def list_images():
@@ -103,7 +103,7 @@ def initialize():
 	carrousel_status = False
 
 	download_images(dropbox_link)
-	#resize_images()
+	resize_images()
 	image_list = list_images()
 
 	carrousel_status = current_carrousel_status
@@ -125,7 +125,7 @@ def send_event():
 
 root = Tk()
 root.title('Connected Frame')
-root.geometry('{}x{}'.format(2560, 1080))
+root.geometry('{}x{}'.format(1920, 1080))
 root.attributes("-fullscreen", True)
 root.config(cursor='none')
 
@@ -163,7 +163,6 @@ center_label.pack(side="bottom", fill=BOTH, expand=1)
 play_button.pack(fill=BOTH, expand=1)
 like_button.pack(fill=BOTH, expand=1)
 
-print("before going into Carrousel")
 
 carrousel()
 
